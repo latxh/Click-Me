@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Latch Practice 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><a href="https://www.csh.bz/line/05xp.html">Click this,</a><br>i dare you.</h1>
+    <div id="cursor"></div>
+    <script>
+        var cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', function (e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.left = x + "px";
+            cursor.style.top = y + "px";
+
+        })
+    </script>
+</body>
+
+</html>

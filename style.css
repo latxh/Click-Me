@@ -1,0 +1,42 @@
+::selection {
+    background: yellow;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 2em;
+    overflow: hidden;
+}
+
+#cursor{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000000;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+h1:hover ~ #cursor{
+    width: 200px;
+    height: 200px;
+    border: 10px dashed #000000;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
